@@ -24,6 +24,8 @@
         {
             return "Österreichische Paradeiser";
         }
+
+        public double Calories { get { return 123.0; } }
     }
 
     public class AustrianBasicPizzaboden : IPizzaFoundation
@@ -32,5 +34,7 @@
         {
             return "Mehlige Pizzabodenpampe";
         }
+
+        public double Calories { get { return 234.0; } }
     }
 }

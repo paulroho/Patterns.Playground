@@ -24,6 +24,8 @@
         {
             return "Great Italian Oregano";
         }
+
+        public double Calories { get { return 345.0; } }
     }
 
     internal class GreatItalianTomato : IIngredient
@@ -32,6 +34,8 @@
         {
             return "Great Italian Tomato";
         }
+
+        public double Calories { get { return 456.0; } }
     }
 
     internal class GreatItalianPizzaFoundation : IIngredient, IPizzaFoundation
@@ -40,5 +44,7 @@
         {
             return "Great Italian Pizza Foundation";
         }
+
+        public double Calories { get { return 56.0; } }
     }
 }

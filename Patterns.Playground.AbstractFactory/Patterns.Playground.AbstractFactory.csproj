@@ -43,11 +43,11 @@
   <ItemGroup>
     <Compile Include="Ingredients\AustrianBasicIngredientProvider.cs" />
     <Compile Include="Ingredients\GreatItalianFoodIngredientProvider.cs" />
-    <Compile Include="Ingredients\IIncredient.cs" />
+    <Compile Include="Ingredients\Incredients.cs" />
     <Compile Include="Ingredients\IIngredientProvider.cs" />
     <Compile Include="IngredientProviderRepository.cs" />
-    <Compile Include="IPizza.cs" />
-    <Compile Include="Ingredients\IPizzaFoundation.cs" />
+    <Compile Include="Nutrition\CaloryCalculator.cs" />
+    <Compile Include="Nutrition\IHasCalories.cs" />
     <Compile Include="Pizza.cs" />
     <Compile Include="PizzaBaker.cs" />
     <Compile Include="Program.cs" />
