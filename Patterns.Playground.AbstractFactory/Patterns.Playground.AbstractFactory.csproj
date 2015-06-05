@@ -46,6 +46,8 @@
     <Compile Include="Ingredients\IIngredientProvider.cs" />
     <Compile Include="IngredientProviderRepository.cs" />
     <Compile Include="Ingredients\Ingredients.cs" />
+    <Compile Include="Nutrition\CaloryCalculator.cs" />
+    <Compile Include="Nutrition\IHasCalories.cs" />
     <Compile Include="Pizza.cs" />
     <Compile Include="PizzaBaker.cs" />
     <Compile Include="Program.cs" />

@@ -1,5 +1,6 @@
 ﻿using System;
 using Patterns.Playground.AbstractFactory.Ingredients;
+using Patterns.Playground.AbstractFactory.Nutrition;
 
 namespace Patterns.Playground.AbstractFactory
 {
@@ -11,7 +12,11 @@ namespace Patterns.Playground.AbstractFactory
 
             var pizzaTomato = MakeMeAPizzaTomato(supplier);
 
+            var caloryCalculator = new CaloryCalculator();
+            var calories = caloryCalculator.Calculate(pizzaTomato);
+
             Console.WriteLine(pizzaTomato);
+            Console.WriteLine("It has {0} calories", calories);
         }
 
         private static IPizza MakeMeAPizzaTomato(string supplier)

@@ -1,10 +1,12 @@
-﻿namespace Patterns.Playground.AbstractFactory.Ingredients
+﻿using Patterns.Playground.AbstractFactory.Nutrition;
+
+namespace Patterns.Playground.AbstractFactory.Ingredients
 {
-    public interface IPizzaFoundation
+    public interface IPizzaFoundation : IHasCalories
     {
     }
 
-    public interface IIngredient
+    public interface IIngredient : IHasCalories
     {
     }
 }
