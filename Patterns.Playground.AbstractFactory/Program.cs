@@ -18,5 +18,10 @@ namespace Patterns.Playground.AbstractFactory
                 Console.WriteLine(incredient);
             }
         }
+
+        private static IIncredientProvider GetIncredientProvider(string supplier)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
