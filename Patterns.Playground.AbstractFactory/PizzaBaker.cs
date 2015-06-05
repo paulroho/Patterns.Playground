@@ -6,9 +6,8 @@ namespace Patterns.Playground.AbstractFactory
     {
         public IPizza CreateTomatoPizza(IIngredientProvider ingredientProvider)
         {
-            var pizza = new Pizza();
+            var pizza = new Pizza(ingredientProvider.GetPizzaFoundation());
 
-            pizza.ApplyPizzaFoundation(ingredientProvider.GetPizzaFoundation());
             pizza.ApplyTopping(ingredientProvider.GetTomatoTopping());
             pizza.ApplyTopping(ingredientProvider.GetOreganoTopping());
 

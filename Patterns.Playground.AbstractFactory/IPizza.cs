@@ -6,5 +6,6 @@ namespace Patterns.Playground.AbstractFactory
     internal interface IPizza
     {
         IEnumerable<IIngredient> Ingredients { get; }
+        IPizzaFoundation PizzaFoundation { get; }
     }
 }

@@ -2,7 +2,7 @@
 {
     public class AustrianBasicIngredientProvider : IIngredientProvider
     {
-        public IIngredient GetPizzaFoundation()
+        public IPizzaFoundation GetPizzaFoundation()
         {
             return new AustrianBasicPizzaboden();
         }
@@ -26,7 +26,7 @@
         }
     }
 
-    public class AustrianBasicPizzaboden : IIngredient
+    public class AustrianBasicPizzaboden : IPizzaFoundation
     {
         public override string ToString()
         {

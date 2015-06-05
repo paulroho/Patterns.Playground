@@ -5,11 +5,13 @@ namespace Patterns.Playground.AbstractFactory
 {
     internal class Pizza : IPizza
     {
+        private readonly IPizzaFoundation _pizzaFoundation;
         private readonly List<IIngredient> _ingredients;
 
-        public Pizza()
+        public Pizza(IPizzaFoundation pizzaFoundation)
         {
             _ingredients = new List<IIngredient>();
+            _pizzaFoundation = pizzaFoundation;
         }
 
         public IEnumerable<IIngredient> Ingredients
@@ -17,9 +19,9 @@ namespace Patterns.Playground.AbstractFactory
             get { return _ingredients; }
         }
 
-        public void ApplyPizzaFoundation(IIngredient ingredient)
+        public IPizzaFoundation PizzaFoundation
         {
-            _ingredients.Add(ingredient);
+            get { return _pizzaFoundation; }
         }
 
         public void ApplyTopping(IIngredient ingredient)

@@ -2,7 +2,7 @@
 {
     internal interface IIngredientProvider
     {
-        IIngredient GetPizzaFoundation();
+        IPizzaFoundation GetPizzaFoundation();
         IIngredient GetTomatoTopping();
         IIngredient GetOreganoTopping();
     }

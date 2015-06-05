@@ -2,7 +2,7 @@
 {
     internal class GreatItalianFoodIngredientProvider : IIngredientProvider
     {
-        public IIngredient GetPizzaFoundation()
+        public IPizzaFoundation GetPizzaFoundation()
         {
             return new GreatItalianPizzaFoundation();
         }
@@ -34,7 +34,7 @@
         }
     }
 
-    internal class GreatItalianPizzaFoundation : IIngredient
+    internal class GreatItalianPizzaFoundation : IIngredient, IPizzaFoundation
     {
         public override string ToString()
         {
