@@ -14,7 +14,7 @@ We have a **pizza baker** (class `PizzaBaker`) that knows how to make a good Piz
 * The proud provider **Great Italian Foods** (supplier "GreatItalianFood")
 * and the humble **Austrian Basic Ingredients** (supplier "AustrianBasic")
 
-The sample is implemented within a simple console application. It takes the name of a supplier, creates the respective ingredient provider, passes it to the pizza baker which make us a delicious tomato pizza (that's all it can). We than print the name of all the ingredients of our pizza.
+The sample is implemented within a simple console application. It takes the name of a supplier, creates the respective ingredient provider, passes it to the pizza baker which make us a delicious tomato pizza (that's all it can). We then print the name of all the ingredients of our pizza.
 
 ### Extension (off-topic)
 (Warning: this has _nothing_ to do with the abstract factory) Out of curiosity we wanted to provide the calories for the whole meal. For that we forced the ingredients and the foundation to inform us about that numbers by introducing an additional interface `IHasCalories`. A `CaloryCalculator` takes our pizza and tells us the sad news.
