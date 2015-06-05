@@ -1,6 +1,6 @@
 ﻿namespace Patterns.Playground.AbstractFactory
 {
-    internal interface IIncredient
+    internal interface IIngredient
     {
     }
 }

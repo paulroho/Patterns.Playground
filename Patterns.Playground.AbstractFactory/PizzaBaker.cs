@@ -4,11 +4,11 @@ namespace Patterns.Playground.AbstractFactory
 {
     internal class PizzaBaker
     {
-        private readonly IIncredientProvider _incredientProvider;
+        private readonly IIngredientProvider _ingredientProvider;
 
-        public PizzaBaker(IIncredientProvider incredientProvider)
+        public PizzaBaker(IIngredientProvider ingredientProvider)
         {
-            _incredientProvider = incredientProvider;
+            _ingredientProvider = ingredientProvider;
             throw new NotImplementedException();
         }
 

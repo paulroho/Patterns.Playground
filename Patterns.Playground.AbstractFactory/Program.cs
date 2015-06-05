@@ -10,22 +10,22 @@ namespace Patterns.Playground.AbstractFactory
 
             var pizzaTomato = MakeMeAPizzaTomato(supplier);
 
-            foreach (var incredient in pizzaTomato.Incredients)
+            foreach (var ingredient in pizzaTomato.Ingredients)
             {
-                Console.WriteLine(incredient);
+                Console.WriteLine(ingredient);
             }
         }
 
         private static IPizza MakeMeAPizzaTomato(string supplier)
         {
-            var incredientProvider = GetIncredientProvider(supplier);
+            var incredientProvider = GetIngredientProvider(supplier);
             var factory = new PizzaBaker(incredientProvider);
 
             var pizzaTomato = factory.CreateTomatoPizza();
             return pizzaTomato;
         }
 
-        private static IIncredientProvider GetIncredientProvider(string supplier)
+        private static IIngredientProvider GetIngredientProvider(string supplier)
         {
             throw new NotImplementedException();
         }
