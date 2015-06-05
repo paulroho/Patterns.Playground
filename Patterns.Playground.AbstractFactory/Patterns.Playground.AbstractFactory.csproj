@@ -41,8 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Ingredients\AustrianBasicIngredientProvider.cs" />
-    <Compile Include="Ingredients\GreatItalianFoodIngredientProvider.cs" />
+    <Compile Include="IngredientProviders\BasicAustrian\AustrianBasicIngredients.cs" />
+    <Compile Include="IngredientProviders\BasicAustrian\Zutaten\Paradeiser.cs" />
+    <Compile Include="IngredientProviders\BasicAustrian\Zutaten\Pizzaboden.cs" />
+    <Compile Include="IngredientProviders\GreatItalianFood\GreatItalianFoods.cs" />
+    <Compile Include="IngredientProviders\GreatItalianFood\Ingredienti\Oregano.cs" />
+    <Compile Include="IngredientProviders\GreatItalianFood\Ingredienti\PastaPerPizzaSuperiore.cs" />
+    <Compile Include="IngredientProviders\GreatItalianFood\Ingredienti\PomodoroSpeziale.cs" />
     <Compile Include="Ingredients\IIngredientProvider.cs" />
     <Compile Include="IngredientProviderRepository.cs" />
     <Compile Include="Ingredients\Ingredients.cs" />
@@ -56,6 +61,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
