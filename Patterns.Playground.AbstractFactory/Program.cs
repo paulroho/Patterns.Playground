@@ -1,4 +1,6 @@
 ﻿using System;
+using Patterns.Playground.AbstractFactory.Ingredients;
+using Patterns.Playground.AbstractFactory.Nutrition;
 
 namespace Patterns.Playground.AbstractFactory
 {
@@ -10,24 +12,24 @@ namespace Patterns.Playground.AbstractFactory
 
             var pizzaTomato = MakeMeAPizzaTomato(supplier);
 
-            foreach (var ingredient in pizzaTomato.Ingredients)
-            {
-                Console.WriteLine(ingredient);
-            }
+            var caloryCalculator = new CaloryCalculator();
+            var calories = caloryCalculator.Calculate(pizzaTomato);
+
+            Console.WriteLine(pizzaTomato);
+            Console.WriteLine("It has {0} calories", calories);
         }
 
         private static IPizza MakeMeAPizzaTomato(string supplier)
         {
-            var incredientProvider = GetIngredientProvider(supplier);
-            var factory = new PizzaBaker(incredientProvider);
+            var ingredientProvider = GetIngredientProvider(supplier);
+            var baker = new PizzaBaker();
 
-            var pizzaTomato = factory.CreateTomatoPizza();
-            return pizzaTomato;
+            return baker.CreateTomatoPizza(ingredientProvider);
         }
 
         private static IIngredientProvider GetIngredientProvider(string supplier)
         {
-            throw new NotImplementedException();
+            return new IngredientProviderRepository().GetIngredientProvider(supplier);
         }
     }
 }
