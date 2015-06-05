@@ -42,7 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IIncredient.cs" />
-    <Compile Include="IIncredientProvider.cs" />
+    <Compile Include="IIngredientProvider.cs" />
     <Compile Include="IPizza.cs" />
     <Compile Include="PizzaBaker.cs" />
     <Compile Include="Program.cs" />
