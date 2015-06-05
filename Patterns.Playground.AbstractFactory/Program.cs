@@ -8,15 +8,21 @@ namespace Patterns.Playground.AbstractFactory
         {
             var supplier = args[0];
 
-            var incredientProvider = GetIncredientProvider(supplier);
-            var factory = new PizzaBaker(incredientProvider);
-
-            var pizzaTomato = factory.CreateTomatoPizza();
+            var pizzaTomato = MakeMeAPizzaTomato(supplier);
 
             foreach (var incredient in pizzaTomato.Incredients)
             {
                 Console.WriteLine(incredient);
             }
+        }
+
+        private static IPizza MakeMeAPizzaTomato(string supplier)
+        {
+            var incredientProvider = GetIncredientProvider(supplier);
+            var factory = new PizzaBaker(incredientProvider);
+
+            var pizzaTomato = factory.CreateTomatoPizza();
+            return pizzaTomato;
         }
 
         private static IIncredientProvider GetIncredientProvider(string supplier)
