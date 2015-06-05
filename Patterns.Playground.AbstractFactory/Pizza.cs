@@ -4,6 +4,12 @@ using Patterns.Playground.AbstractFactory.Ingredients;
 
 namespace Patterns.Playground.AbstractFactory
 {
+    internal interface IPizza
+    {
+        IEnumerable<IIngredient> Ingredients { get; }
+        IPizzaFoundation PizzaFoundation { get; }
+    }
+
     internal class Pizza : IPizza
     {
         private readonly IPizzaFoundation _pizzaFoundation;
