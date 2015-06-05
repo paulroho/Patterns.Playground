@@ -1,4 +1,5 @@
 ﻿using System;
+using Patterns.Playground.AbstractFactory.Ingredients;
 
 namespace Patterns.Playground.AbstractFactory
 {
@@ -19,15 +20,14 @@ namespace Patterns.Playground.AbstractFactory
         private static IPizza MakeMeAPizzaTomato(string supplier)
         {
             var incredientProvider = GetIngredientProvider(supplier);
-            var factory = new PizzaBaker(incredientProvider);
+            var baker = new PizzaBaker();
 
-            var pizzaTomato = factory.CreateTomatoPizza();
-            return pizzaTomato;
+            return baker.CreateTomatoPizza(incredientProvider);
         }
 
         private static IIngredientProvider GetIngredientProvider(string supplier)
         {
-            throw new NotImplementedException();
+            return new IngredientProviderRepository().GetIngredientProvider(supplier);
         }
     }
 }

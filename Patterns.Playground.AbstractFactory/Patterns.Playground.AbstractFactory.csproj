@@ -41,9 +41,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IIncredient.cs" />
-    <Compile Include="IIngredientProvider.cs" />
+    <Compile Include="Ingredients\AustrianBasicIngredientProvider.cs" />
+    <Compile Include="Ingredients\GreatItalianFoodIngredientProvider.cs" />
+    <Compile Include="Ingredients\IIncredient.cs" />
+    <Compile Include="Ingredients\IIngredientProvider.cs" />
+    <Compile Include="IngredientProviderRepository.cs" />
     <Compile Include="IPizza.cs" />
+    <Compile Include="Pizza.cs" />
     <Compile Include="PizzaBaker.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

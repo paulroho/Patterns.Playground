@@ -1,20 +1,18 @@
-using System;
+using Patterns.Playground.AbstractFactory.Ingredients;
 
 namespace Patterns.Playground.AbstractFactory
 {
     internal class PizzaBaker
     {
-        private readonly IIngredientProvider _ingredientProvider;
-
-        public PizzaBaker(IIngredientProvider ingredientProvider)
+        public IPizza CreateTomatoPizza(IIngredientProvider ingredientProvider)
         {
-            _ingredientProvider = ingredientProvider;
-            throw new NotImplementedException();
-        }
+            var pizza = new Pizza();
 
-        public IPizza CreateTomatoPizza()
-        {
-            throw new NotImplementedException();
+            pizza.ApplyPizzaFoundation(ingredientProvider.GetPizzaFoundation());
+            pizza.ApplyTopping(ingredientProvider.GetTomatoTopping());
+            pizza.ApplyTopping(ingredientProvider.GetOreganoTopping());
+
+            return pizza;
         }
     }
 }
