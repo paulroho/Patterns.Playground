@@ -11,11 +11,7 @@ namespace Patterns.Playground.AbstractFactory
 
             var pizzaTomato = MakeMeAPizzaTomato(supplier);
 
-            Console.WriteLine(pizzaTomato.PizzaFoundation);
-            foreach (var ingredient in pizzaTomato.Ingredients)
-            {
-                Console.WriteLine(ingredient);
-            }
+            Console.WriteLine(pizzaTomato);
         }
 
         private static IPizza MakeMeAPizzaTomato(string supplier)

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Text;
 using Patterns.Playground.AbstractFactory.Ingredients;
 
 namespace Patterns.Playground.AbstractFactory
@@ -27,6 +28,18 @@ namespace Patterns.Playground.AbstractFactory
         public void ApplyTopping(IIngredient ingredient)
         {
             _ingredients.Add(ingredient);
+        }
+
+        public override string ToString()
+        {
+            var sb = new StringBuilder();
+            sb.AppendFormat("foundation: {0}", PizzaFoundation).AppendLine();
+            foreach (var ingredient in Ingredients)
+            {
+                sb.AppendFormat("topping: {0}", ingredient).AppendLine();
+            }
+
+            return sb.ToString();
         }
     }
 }
