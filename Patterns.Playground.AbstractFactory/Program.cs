@@ -16,10 +16,10 @@ namespace Patterns.Playground.AbstractFactory
 
         private static IPizza MakeMeAPizzaTomato(string supplier)
         {
-            var incredientProvider = GetIngredientProvider(supplier);
+            var ingredientProvider = GetIngredientProvider(supplier);
             var baker = new PizzaBaker();
 
-            return baker.CreateTomatoPizza(incredientProvider);
+            return baker.CreateTomatoPizza(ingredientProvider);
         }
 
         private static IIngredientProvider GetIngredientProvider(string supplier)
